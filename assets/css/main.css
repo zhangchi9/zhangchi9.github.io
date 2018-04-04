@@ -3957,6 +3957,33 @@
 				width: 100%;
 			}
 
+			#banner .figure {
+			-moz-flex-grow: 0;
+			-webkit-flex-grow: 0;
+			-ms-flex-grow: 0;
+			flex-grow: 0;
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
+			display: block;
+			margin: 0 0 2em 4em;
+			width: 40%;
+		}
+
+			#banner .figure img {
+				height: 60%;
+				-moz-object-fit: contain;
+				-webkit-object-fit: contain;
+				-ms-object-fit: contain;
+				object-fit: contain;
+				-moz-object-position: center;
+				-webkit-object-position: center;
+				-ms-object-position: center;
+				object-position: center;
+				width: 100%;
+			}
+
 		@media screen and (orientation: portrait) {
 
 			#banner {
@@ -3997,6 +4024,35 @@
 					min-height: 18em;
 					width: 100%;
 				}
+
+				#banner .figure {
+					-moz-flex-grow: 0;
+					-webkit-flex-grow: 0;
+					-ms-flex-grow: 0;
+					flex-grow: 0;
+					-moz-flex-shrink: 0;
+					-webkit-flex-shrink: 0;
+					-ms-flex-shrink: 0;
+					flex-shrink: 0;
+					margin: 0 0 4em 0;
+					height: 25em;
+					max-height: 50vh;
+					min-height: 18em;
+					width: 100%;
+				}
+
+					#banner .figure img {
+						height: 70%;
+						-moz-object-fit: cover;
+						-webkit-object-fit: cover;
+						-ms-object-fit: cover;
+						object-fit: cover;
+						-moz-object-position: center;
+						-webkit-object-position: center;
+						-ms-object-position: center;
+						object-position: center;
+						width: 100%;
+					}
 
 		}
 
