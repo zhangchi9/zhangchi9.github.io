@@ -3941,7 +3941,8 @@
 			flex-shrink: 0;
 			display: block;
 			margin: 0 0 2em 4em;
-			width: 40%;
+			width: 20%;
+			height: 20%;
 		}
 
 			#banner .image img {
