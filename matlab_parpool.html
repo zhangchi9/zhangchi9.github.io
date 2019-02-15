@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Projects</title>
+		<title>Resources</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -19,7 +19,6 @@
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-
 		  gtag('config', 'UA-99174528-2');
 		</script>
 	</head>
@@ -34,40 +33,29 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Projects</strong></a>
+									<a href="index.html" class="logo"><strong>Resources</strong></a>
 								</header>
 
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2></h2>
+									</header>
 
 
-								<section id="banner">
-									<div class="content">
+									<!-- Content -->
+										<h3 id="content"><p>Matlab, “parpool not enough input argument” solution</p></h3>
 
-										<h3><a href="Airbus_ships_detection.html">Kaggle computer vision problem: airbus ship detection </a> (Awarded a bronze medal on kaggle)</h3>
+										Recently when I used matlab parallel computing on my university’s cluster with matlab 2016a on Unix OS, I was trying to open a parpool using parpool(4).  Unexpectedly it gives me an error: ”not enough input argument”. The solution is given by the <a href="https://www.mathworks.com/matlabcentral/answers/323703-getting-error-using-parpool-line-103-not-enough-input-arguments">links</a>.  Thanks to randy cruise for providing this solution.
 
-										<p>This a computer vision object detection and segmentation problem on kaggle (<a href="https://www.kaggle.com/c/airbus-ship-detection#description">https://www.kaggle.com/c/airbus-ship-detection#description</a>). In this problem, I build a model that detects all ships in satellite images and generate a mask for each ship. There several deep learning models that works with image detection such as YOLO, R-CNN, Fast R-CNN, Faster R-CNN. For objection segmentation, Unet is a great tools. Recently there is a nice paper on object instance segmentation (<a href="https://arxiv.org/abs/1703.06870">https://arxiv.org/abs/1703.06870</a> called Mask R-CNN. So finally I decided to use the Mask R-CNN network combined with Unet to do the problem.</p> 
-									</div>
-								</section>
-								<div class="figure">
-										<img src="images/pic06.png" alt="" width="90%" /> 
-								</div>
-
-								<!-- <section id="banner">
-									<div class="content">
-										<h3>Energy-efficient population coding constraints network size of a neuronal array system</h3>
-										Related Paper: 
+										To summarize:
 										<ul>
-											<li>Yu, Lianchun, <strong>Chi Zhang</strong>, Liwei Liu, and Yuguo Yu. "Energy-efficient population coding constraints network size of a neuronal array system." Scientific Reports 6 (2016): 19369. <a href="https://www.nature.com/articles/srep19369.pdf">Download</a></li>
-											<li><strong>Chi Zhang</strong>, Liu Li-Wei, Wang Long-Fei, Yue Yuan, and Yu Lian-Chun. "Optimal Size for Maximal Energy Efficiency in Information Processing of Biological Systems Due to Bistability" Chinese Physics Letters 32, no. 11 (2015): 110501. <a href="http://iopscience.iop.org/article/10.1088/0256-307X/32/11/110501/pdf">Download</a></li>
+										<li>In matlab command window type in “prefdir”</li>
+										<li>You can see a directory looks like C:\…….\MATLAB\R2016a</li>
+										<li>Cd to C:\…….\MATLAB</li>
+										<li>Delete the folder “local_cluster_jobs” and restart matlab.</li>
 										</ul>
-										<p>We consider the open issue of how the energy efficiency of the neural information transmission process, in a general neuronal array, constrains the network size, and how well this network size ensures the reliable transmission of neural information in a noisy environment. By direct mathematical analysis, we have obtained general solutions proving that there exists an optimal number of neurons in the network, where the average coding energy cost (defined as energy consumption divided by mutual information) per neuron passes through a global minimum for both subthreshold and superthreshold signals. With increases in background noise intensity, the optimal neuronal number decreases for subthreshold signals and increases for suprathreshold signals. The existence of an optimal number of neurons in an array network reveals a general rule for population coding that states that the neuronal number should be large enough to ensure reliable information transmission that is robust to the noisy environment but small enough to minimize energy cost.</p>
-									</div>
-
-									<div class="figure">
-										<img src="images/pic03.jpg" alt="" /> 
-										Figure: (a) Coding energy cost η as a function of N for ∆v<sub>sub</sub>= −0.1 in the cases of different noise intensities. (b) η vs. N for ∆v<sub>supra</sub> = 0.1 in the cases of different noise intensities. (c) The optimal neuronal number Nopt vs.noise intensity D for different input signal intensities ∆v. (d) The minimum coding energy cost η<sub>opt</sub> vs. the optimal neuronal number Nopt for different signal intensities ∆v in the case of different input pulse frequencies.
-									</div>
-
-								</section> -->
+								</section>
 
 						</div>
 					</div>
@@ -84,17 +72,17 @@
 										<li><a href="index.html">Home</a></li>
 										<li><a href="CV.html">CV</a></li>
 										<li><a href="Research.html">Research</a></li>
-										<li><a href="Resources.html">Resources</a></li>
 										<li><a href="projects.html">Projects</a></li>
 										<li>
 											<span class="opener">Resources</span>
 											<ul>
-												<li><a href="Resources.html#programming">Programing tricks</a></li>
-												<li><a href="Resources.html#talks">Boston Area Neuroscience Talks</a></li>
+												<li><a href="Resources.html">Programing tricks</a></li>
+												<li><a href="Resources.html">Boston Area Neuroscience Talks</a></li>
 												<li><a href="Resources.html#conference">Neuroscience conference</a></li>
 												<li><a href="Resources.html#course">Machine Learning and Data Science course</a></li>
 												<li><a href="Resources.html#books">Textbook</a></li>
 												<li><a href="Resources.html#blogs">Blog</a></li>
+
 											</ul>
 										</li>
 									</ul>
