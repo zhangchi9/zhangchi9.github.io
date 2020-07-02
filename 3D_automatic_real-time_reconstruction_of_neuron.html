@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99174528-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-99174528-2');
+		</script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><strong>Projects</strong> </a>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<h3>Problem</h3>
+									<p>This is a Kaggle instance segmentation problem (<a href="https://www.kaggle.com/c/airbus-ship-detection#description">https://www.kaggle.com/c/airbus-ship-detection#description</a>). In the problem, I am trying to build a model to detects all ships in satellite images as quickly as possible.
+									<p>Shipping traffic is growing fast. More ships increase the chances of infractions at sea like environmentally devastating ship accidents, piracy, illegal fishing, drug trafficking, and illegal cargo movement. This has compelled many organizations, from environmental protection agencies to insurance companies and national government authorities, to have a closer watch over the open seas. Airbus offers comprehensive maritime monitoring services by building a meaningful solution for wide coverage, fine details, intensive monitoring, premium reactivity and interpretation response. Combining its proprietary-data with highly-trained analysts, they help to support the maritime industry to increase knowledge, anticipate threats, trigger alerts, and improve efficiency at sea. A lot of work has been done over the last 10 years to automatically extract objects from satellite images with significative results but no effective operational effects. Now Airbus is turning to Kagglers to increase the accuracy and speed of automatic ship detection.</p>
+										
+									<h3>Data</h3>
+									<p>The data are provided by Kaggle. The data are 192,555 satellite images (in .jpg format) of different size and different resolution.  </p>
+									<div class="figure">
+										<img src="images/Airbus_figure1.png" alt="" width="80%" /> 
+									</div>
+									<p>Validation Data: 20% of the data are used to validate the model. </p>
+									<p>Data augmentation: Because the images are satellite images, rotate the image by arbitrary angle can help to increase the training accuracy. See below. </p>
+									<div class="figure">
+										<img src="images/Airbus_figure2.png" alt="" width="80%" /> 
+									</div>
+									<h4>Date exploratory analysis </h4>
+									<div class="figure">
+										<img src="images/Airbus_figure3.png" alt="" width="80%" /> 
+									</div>
+
+									<h3>Model</h3>
+									<p>In this problem, because most image (~80%) contains no ships, it’s very important to select those images without any ships at the begining. So, my strategy is the following:</p>
+									<li>1.	<strong>Image classification:</strong> build a classifier to detect if a image has any ships.</li>
+									<li>2.	<strong>Image segmentation:</strong> Feed the image that contains image detected by the classifier to Mask R-CNN.</li>
+									<p> </p>
+									<h4>Image classification </h4>
+									<p>The image classification is built upon fast.ai framework. I use the network structure as the same as Resnext50 (a famous image classification network). Instead of training from scratch, I use the network structure that were pre-trained on the ImageNet dataset. </p>
+									<div class="figure">
+										<img src="images/Airbus_figure4.png" alt="" width="80%" /> 
+									</div>
+									
+									<h4>Image segmentation</h4>
+									<p>There are several deep learning models that works with objects detection such as YOLO, R-CNN, Fast R-CNN, Faster R-CNN. Recently there is a nice paper on object instance segmentation (<a href="https://arxiv.org/abs/1703.06870">https://arxiv.org/abs/1703.06870</a>) called Mask R-CNN. It’s has been proved works very well for object detection. The image segmentation model is built using TensorFlow framework. Every image which detected has ships are feed into the Mask-RCNN network to generate a mask for every individual ship.</p>
+									<div class="figure">
+										<img src="images/Airbus_figure5.png" alt="" width="80%" /> 
+									</div>
+
+									<h3>Result</h3>
+									<p>Achieved an overall IoU score of 0.84475, ranked top 10%. </p>
+									
+									<h3>Conclusions</h3>
+									<p>This is a very interesting Kaggle competition. It involves image classification, object detection and object segmentation.  I learned use different frame works for deep learning and computer vision (such as fastai, TensorFlow).
+									If I had more time to do the projects, I would like to add cross validation, training the model longer and try more different hyperparameters to make the model more robust. </p>
+
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="CV.html">CV</a></li>
+										<li><a href="Research.html">Research</a></li>
+										<li><a href="projects.html">Projects</a></li>
+										<li>
+											<span class="opener">Resources</span>
+											<ul>
+												<li><a href="Resources.html#programming">Programing tricks</a></li>
+												<li><a href="Resources.html#talks">Boston Area Neuroscience Talks</a></li>
+												<li><a href="Resources.html#conference">Neuroscience conference</a></li>
+												<li><a href="Resources.html#course">Machine Learning and Data Science course</a></li>
+												<li><a href="Resources.html#books">Textbook</a></li>
+												<li><a href="Resources.html#blogs">Blog</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<p>My office is located at 110 Dana hall, department of Physics, Northeastern University. The best way to reach me is by Email:</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="mailto:zhang.chi9@husky.neu.edu?" >zhang.chi9@husky.neu.edu</a></li>
+										<li class="fa-facebook"><a href="https://www.facebook.com/chi.zhang.9809" >Facebook</a></li>
+										<li class="fa-linkedin"><a href="https://www.linkedin.com/in/chi-zhang-linked-in/" >LinkedIn</a></li>
+										<li class="fa-weixin">Scan my wechat QR code<br> 
+										<img src="images/pic02.jpg" alt="" height="160" width="160"/> 
+										</li>
+
+										<li class="fa-home">110 Forsyth St. Boston, MA 02115</li>
+									</ul>
+									
+									<div id="map"></div>
+								    <script>
+								      function initMap() {
+								        var uluru = {lat: 42.338080, lng: -71.089346};
+								        var map = new google.maps.Map(document.getElementById('map'), {
+								          zoom: 15,
+								          center: uluru
+								        });
+								        var marker = new google.maps.Marker({
+								          position: uluru,
+								          map: map
+								        });
+								      }
+								    </script>
+
+
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; 2018 Chi Zhang. Template designed by <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtoNb4um4LyJJDg_8c-vttPyoMg0Mv3jc&callback=initMap">
+		 	</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
