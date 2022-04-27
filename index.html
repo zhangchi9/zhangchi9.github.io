@@ -45,7 +45,9 @@
 										
 										<p>I completed my doctoral studies under the supervision of <a href="https://scholar.google.com/scholar?q=%22armen+stepanyants%22&hl=en&as_sdt=0,22">Prof. Armen Stepanyants</a> at the <a href = "http://www.northeastern.edu/neurogeometry/">Neurogeometry lab</a> in the <a href="https://cos.northeastern.edu/physics/">Department of Physics </a> at Northeastern University. I got my bachelor's degree from Lanzhou University in China. My research is mainly focused on using statistical physics, mathematical and machine learning methods to understand the dynamics and the function of the brain. Currently, I am developing algorithms to reconstruct C.elegans cellbodies and dendrites. More detail about my research can be found in my research page. </p>
 										<ul class="actions">
-											<li><a href="CV.html" class="button">More</a></li>
+											<li><a href="CV.html" class="button">CV</a></li>
+											<li><a href="#Research" class="button">Research</a></li>
+											<li><a href="#Projects" class="button">Projects</a></li>
 										</ul>
 									</div>
 
@@ -53,7 +55,7 @@
 										<img src="images/pic01.JPG" alt="" /> 
 										<br>
 										<ul class='underimage'>
-											<li class="fa-envelope"><a href="mailto:zhang.chi9@husky.neu.edu?">zhang.chi9@husky.neu.edu</a></li>
+											<li class="fa-envelope"><a href="mailto:chi.aaron.zhang@gmail.com?">chi.aaron.zhang@gmail.com</a></li>
 											<li class="fa-github"><a href="https://github.com/zhangchi9">GitHub</a></li>
 											<li class="fa-database"><a href="https://www.kaggle.com/zhangchi9">Kaggle</a></li>
 											<li class="fa-google"><a href="https://scholar.google.com/citations?user=ov9pIGwAAAAJ&hl=en&authuser=1">Google Scholar</a></li>
@@ -61,176 +63,85 @@
 									</div>
 								</section>
 
-							<!-- Section -->
+							<!-- Section: Research -->
 								<section>
 									<header class="major">
-										<h2>Highlights</h2>
+										<h2 id="Research">Research</h2>
 									</header>
-									<div class="posts">
-										<article>
-											<a class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<!-- <p>Publication: Energy-efficient population coding constrains network size of a neuronal array system</p> -->
-											<!-- <ul class="actions">
-												<li><a href="https://www.nature.com/articles/srep19369.pdf" class="button">Download</a></li>
-											</ul> -->
-										</article>
-						
-										<!-- Section 
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+									<section id="banner">
+										<div class="content">
+	
+											<h3>Three-dimensional automated reconstruction of neurons in C. elegans </h3>
+	
+											<p>In this project, I develop a pipeline for real-time automated reconstruction of neurons from 3D stacks of optical microscopy images. The pipeline is based on deep convolutional neural networks and includes image compression, image enhancement, segmentation of neuron cell bodies, and neurite tracing. I show that artificial neural networks can be trained to effectively compress 3D stacks of optical microscopy images and significantly enhance the intensity of neurites, making the results amenable for fast and accurate reconstruction of neurons. 
+					
+											</p>
+										</div>
+										<div class="figure">
+											<img src="images/pic09.gif" alt=""/> 
+											Figure: Reconstruction of C.elegans neurites including cell bodies, axons and dendrites. 
+										</div>
+									</section>
+	
+									<section id="banner">
+										<div class="content">
+	
+											<h3>Noise in neurons and synapses enables reliable associative memory storage in local cortical circuits. <a href="https://www.biorxiv.org/content/10.1101/583922v2">[More]</a></h3>
+	
+											<p>Neural networks in the brain can function reliably despite various sources of errors and noise present at every step of signal transmission. These sources include errors in the presynaptic inputs to the neurons, noise in synaptic transmission, and fluctuations in the neurons’ postsynaptic potentials. Collectively they lead to errors in the neurons’ outputs which are, in turn, injected into the network. Does unreliable network activity hinder fundamental functions of the brain, such as learning and memory retrieval? To explore this question, this article examines the effects of errors and noise on properties of biologically constrained networks of inhibitory and excitatory neurons involved in associative sequence learning. The associative learning problem is solved analytically and numerically, and it is also shown how memory sequences can be loaded into the network with a more biologically plausible perceptron-type learning rule. Interestingly, the results reveal that errors and noise during learning increase the probability of memory recall. There is a tradeoff between the capacity and reliability of stored memories, and, noise during learning is required for optimal retrieval of stored information. What is more, networks loaded with associative memories to capacity display many structural and dynamical features observed in local cortical circuits. Due to the similarities between the associative and brain networks, this article predicts that the connections originating from unreliable inhibitory and excitatory neurons or neuron classes in the cortex must be depressed or eliminated during learning, while the connections onto noisy neurons or neuron classes must have lower probabilities and higher weights.</p>
+										</div>
+										<div class="figure">
+											<img src="images/pic05.jpg" alt="" /> 
+											Figure: Associative learning model. (a) Excitatory and inhibitory neurons in the cortical column. (b) Corresponding recurrent artificial neuron network. (c) The dynamics of the neuron network which we believe is the memory representation in our brain. 
+										</div>
+									</section>
+	
+									<section id="banner">
+										<div class="content">
+	
+											<h3>Robust Associative Learning Is Sufficient to Explain the Structural and Dynamical Properties of Local Cortical Circuits. <a href="https://www.jneurosci.org/content/39/35/6888.abstract">[More]</a></h3>
+	
+											<p>The ability of neural networks to associate successive states of network activity lies at the basis of many cognitive functions. Hence, we hypothesized that many ubiquitous structural and dynamical properties of local cortical networks result from associative learning. To test this hypothesis, we trained recurrent networks of excitatory and inhibitory neurons on memories composed of varying numbers of associations and compared the resulting network properties with those observed experimentally. We show that, when the network is robustly loaded with near-maximum amount of associations it can support, it develops properties that are consistent with the observed probabilities of excitatory and inhibitory connections, shapes of connection weight distributions, overexpression of specific 2- and 3-neuron motifs, distributions of connection numbers in clusters of 3–8 neurons, sustained, irregular, and asynchronous firing activity, and balance of excitation and inhibition. In addition, memories loaded into the network can be retrieved, even in the presence of noise that is comparable with the baseline variations in the postsynaptic potential. The confluence of these results suggests that many structural and dynamical properties of local cortical networks are simply a byproduct of associative learning. We predict that overexpression of excitatory–excitatory bidirectional connections observed in many cortical systems must be accompanied with underexpression of bidirectionally connected inhibitory–excitatory neuron pairs.</p>
+										</div>
+										<div class="figure">
+											<img src="images/pic08.jpg" alt="" /> 
+											Figure: Associative memory storage in recurrent networks of excitatory and inhibitory neurons. 
+										</div>
+									</section>
+	
+									<section id="banner">
+										<div class="content">
+											<h3>Energy-efficient population coding constraints network size of a neuronal array system. <a href="https://www.nature.com/articles/srep19369.pdf">[More]</a></h3>
+											Related Paper: 
+											<ul>
+												<li>Yu, Lianchun, <strong>Chi Zhang</strong>, Liwei Liu, and Yuguo Yu. "Energy-efficient population coding constraints network size of a neuronal array system." Scientific Reports 6 (2016): 19369. <a href="https://www.nature.com/articles/srep19369.pdf">Download</a></li>
+												<li><strong>Chi Zhang</strong>, Liu Li-Wei, Wang Long-Fei, Yue Yuan, and Yu Lian-Chun. "Optimal Size for Maximal Energy Efficiency in Information Processing of Biological Systems Due to Bistability" Chinese Physics Letters 32, no. 11 (2015): 110501. <a href="http://iopscience.iop.org/article/10.1088/0256-307X/32/11/110501/pdf">Download</a></li>
 											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										-->
-
-									</div>
+											<p>We consider the open issue of how the energy efficiency of the neural information transmission process, in a general neuronal array, constrains the network size, and how well this network size ensures the reliable transmission of neural information in a noisy environment. By direct mathematical analysis, we have obtained general solutions proving that there exists an optimal number of neurons in the network, where the average coding energy cost (defined as energy consumption divided by mutual information) per neuron passes through a global minimum for both subthreshold and superthreshold signals. With increases in background noise intensity, the optimal neuronal number decreases for subthreshold signals and increases for suprathreshold signals. The existence of an optimal number of neurons in an array network reveals a general rule for population coding that states that the neuronal number should be large enough to ensure reliable information transmission that is robust to the noisy environment but small enough to minimize energy cost.</p>
+										</div>
+	
+										<div class="figure">
+											<img src="images/pic03.jpg" alt="" /> 
+											Figure: (a) Coding energy cost η as a function of N for ∆v<sub>sub</sub>= −0.1 in the cases of different noise intensities. (b) η vs. N for ∆v<sub>supra</sub> = 0.1 in the cases of different noise intensities. (c) The optimal neuronal number Nopt vs.noise intensity D for different input signal intensities ∆v. (d) The minimum coding energy cost η<sub>opt</sub> vs. the optimal neuronal number Nopt for different signal intensities ∆v in the case of different input pulse frequencies.
+										</div>
+									</section>
 								</section>
 
-							<!-- Section -->
+							<!-- Section: Projects -->
 								<section>
 									<header class="major">
-										<h2>Latest News:</h2>
+										<h2 id="Projects">Projects</h2>
 									</header>
-									<div class="features">
-										<article class="moreBox">
-											<div class="content">
-												<h4>10/2020</h4>
-												<p> Deployed a web application in Streamlit on AWS EC2 (<a href="http://54.243.243.63:8501/">​www.archifinder.xyz</a>​) to recommend existing architectures from user’s uploaded sketch ranked by cosine similarities </p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>09/2020</h4>
-												<p> Received fellowship at Insight Data Science </p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>08/2020</h4>
-												<p> Thesis defense completed! </p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>03/2020</h4>
-												<p>New paper on bioRxiv <a href="https://www.biorxiv.org/content/10.1101/583922v2">Noise in neurons and synapses enables reliable associative memory storage in local cortical circuits</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>08/2019</h4>
-												<p>Finished computational biology/data science internship at <a href="https://www.axcellahealth.com/">Axcella Health</a> and awarded with the best graduate intern;</p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>01/2019</h4>
-												<p>Abstract accepted by <a href="http://www.cosyne.org/c/index.php?title=Cosyne_19">Cosyne 2019</a> with travel award;</p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>05/2018</h4>
-												<p>Paper "Robust associative learning is sufficient to explain structural and dynamical properties of local cortical circuits" on bioRxiv: <a href="https://www.biorxiv.org/content/early/2018/05/11/320432">click here</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>04/2018</h4>
-												<p>The webpage of Boston area neuroscience talks/seminars summary published <a href="https://zhangchi9.github.io/Resources.html">click here</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>03/2018</h4>
-												<p>Paticipated the <a href="http://gias.nyu.edu/canonical-computation-brains-machines-2018/">Canonical Computation in Brains and Machines 2018 conference @NYU</a>. The conference video can be found <a href="https://www.youtube.com/playlist?list=PLBHioGD0U1Cjd-meZbEcz-9ZxK-mb50tZ">here</a>;</p>
-											</div>
-										</article>
-
-
-										<article class="moreBox">
-											<div class="content">
-												<h4>03/2018</h4>
-												<p>Abstract accepted by <a href="http://www.cnsorg.org/cns-2018">Computational Neuroscience Meeting 2018</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;">
-											<div class="content">
-												<h4>01/2018</h4>
-												<p>Created a <a href = "http://www.northeastern.edu/neurogeometry/wp-content/uploads/Database-of-Local-Connectivity.xlsx">database of connection probabilities and strengths</a> in local brain circuits in mammals. The database is a compilation of 152 articles published in peer-reviewed journals from 1990 to 2016, describing a total of 856 projections;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;">
-											<div class="content">
-												<h4>11/2017</h4>
-												<p>Poster presented at <a href="https://www.sfn.org/annual-meeting/neuroscience-2017">SfN Annual Conference 2017</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;"> 
-											<div class="content">
-												<h4>07/2017</h4>
-												<p>Completed the <a href="http://nand.princeton.edu/">Neurotechnologies for Analysis of Neural Dynamics</a> summer course at Princeton;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;">
-											<div class="content">
-												<h4>06/2017</h4>  
-												<p>Poster presented at <a href="https://www.math.uh.edu/~zpkilpat/icmns2017/index.html">Mathematical Neuroscience Conference 2017</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;">
-											<div class="content">
-												<h4>05/2017</h4>
-												<p>Abstract accepted by <a href="https://www.sfn.org/annual-meeting/neuroscience-2017">SfN Annual Conference 2017</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;">
-											<div class="content">
-												<h4>04/2017</h4> 
-												<p>Abstract accepted by <a href="http://www.cnsorg.org/cns-2017">Computational Neuroscience Meeting 2017</a>;</p>
-											</div>
-										</article>
-
-										<article class="moreBox" style="display: none;"> 
-											<div class="content">
-												<h4>03/2017</h4>  
-												<p>Abstract accepted by <a href="https://www.math.uh.edu/~zpkilpat/icmns2017/index.html">Mathematical Neuroscience Conference 2017</a>;</p>
-											</div>
-										
-										</article>
-
-										<article> 
-											<ul class="actions">
-												<li><a href="#" id="loadMore" class="button">Load More</a></li>
-											</ul>
-										</article>
-
-									</div>
+									<section id="banner">
+										<div class="content">
+	
+											<h3>Kaggle computer vision problem: airbus ship detection (Awarded a bronze medal) <a href="Airbus_ships_detection_writeup.html">[More]</a> <a href="Airbus_ships_detection_code.html">[Code]</a></h3>
+											<p>This a computer vision object detection and segmentation problem on kaggle (<a href="https://www.kaggle.com/c/airbus-ship-detection#description">https://www.kaggle.com/c/airbus-ship-detection#description</a>). In this problem, I build a model that detects all ships in satellite images and generate a mask for each ship. There several deep learning models that works with image detection such as YOLO, R-CNN, Fast R-CNN, Faster R-CNN. For objection segmentation, Unet is a great tools. Recently there is a nice paper on object instance segmentation (<a href="https://arxiv.org/abs/1703.06870">https://arxiv.org/abs/1703.06870</a> called Mask R-CNN. So finally I decided to use the Mask R-CNN network combined with Unet to do the problem.</p> 
+										</div>
+										<div class="figure">
+											<img src="images/pic06.png" alt="" width="10%" /> 
+										</div>
+									</section>
 								</section>
 
 
@@ -248,19 +159,6 @@
 									<ul>
 										<li><a href="index.html">Home</a></li>
 										<li><a href="CV.html">CV</a></li>
-										<li><a href="Research.html">Research</a></li>
-										<li><a href="projects.html">Projects</a></li>
-										<li>
-											<span class="opener">Resources</span>
-											<ul>
-												<li><a href="Resources.html#programming">Programing tricks</a></li>
-												<li><a href="Resources.html#talks">Boston Area Neuroscience Talks</a></li>
-												<li><a href="Resources.html#conference">Neuroscience conference</a></li>
-												<li><a href="Resources.html#course">Machine Learning and Data Science course</a></li>
-												<li><a href="Resources.html#books">Textbook</a></li>
-												<li><a href="Resources.html#blogs">Blog</a></li>
-											</ul>
-										</li>
 									</ul>
 								</nav>
 
@@ -271,14 +169,9 @@
 									</header>
 									<p>My office is located at 110 Dana hall, department of Physics, Northeastern University. The best way to reach me is by Email:</p>
 									<ul class="contact">
-										<li class="fa-envelope"><a href="mailto:zhang.chi9@husky.neu.edu?" >zhang.chi9@husky.neu.edu</a></li>
-										<li class="fa-facebook"><a href="https://www.facebook.com/chi.zhang.9809" >Facebook</a></li>
+										<li class="fa-envelope-o"><a href="mailto:chi.aaron.zhang@gmail.com?" >chi.aaron.zhang@gmail.com</a></li>
 										<li class="fa-linkedin"><a href="https://www.linkedin.com/in/chi-zhang-linked-in/" >LinkedIn</a></li>
-										<li class="fa-weixin">Scan my wechat QR code<br> 
-										<img src="images/pic02.jpg" alt="" height="160" width="160"/> 
-										</li>
-
-										<li class="fa-home">110 Forsyth St. Boston, MA 02115</li>
+										<li class="fa-home">Boston, MA</li>
 									</ul>
 									
 									<div id="map"></div>
